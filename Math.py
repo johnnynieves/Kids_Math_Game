@@ -11,48 +11,110 @@ import math
 import random
 
 
-
-
-i = 1
 print('***********************************************************')
 print('******************   NIEVES MATH GAME   *******************')
 print('***********************************************************')
-def addition():
-    pass
-for i in range(1, 11):
-    a = random.randint(0, 10)
-    b = random.randint(0, 10)
-    ans = a + b
-    print('*                                                         *')
-    print('*                                                         *')   
-    print("*   Please enter your answer                              *")
-    print('*                                                         *')
-    print('*                                                         *')
-    print("*     " + str(a) + "                                                   *")
-    print("*    +" + str(b) + "                                                   *")
-    print('* _________                                               *')
-    urans = input('*    ')
-    if urans == ans:
-        print('*                                                         *\n* GREAT JOB!!                                             *')
-        print('*                                                         *')
-        print('*                                                         *')
-        print('*                                                         *')
-    elif urans != ans:
-        print('*                                                         *\n* Oh Oh!! Try Again Please.                               *')
-        while urans != ans:
+def add():
+    print('addition')
+    i = 1
+    while i < 11:
+        for i in range(1, 11):
+            a = random.randint(0, 10)
+            b = random.randint(0, 10)
+            ans = a + b
+            print('*                                                         *')
+            print('*                                                         *')   
+            print("*   Please enter your answer                              *")
+            print('*                                                         *')
+            print('*                                                         *')
+            print("*     " + str(a) + "                                                   *")
+            print("*    +" + str(b) + "                                                   *")
+            print('* _________                                               *')
             urans = input('*    ')
             if urans == ans:
-                print('*                                                         *\n* GREAT JOB!!                                             *')
+                print('*                                                         *\n*  GREAT JOB!!                                             *')
+                print('*                                                         *')
+                print('*                                                         *')
                 print('*                                                         *')
             elif urans != ans:
-                print('*                                                         *\n* Oh Oh!! Try Again Please.                               *\n*')
-    i = i+1
-print('***********************************************************')
+                print('*                                                         *\n* Oh Oh!! Try Again Please.                               *')
+                while urans != ans:
+                    urans = input('*    ')
+                    if urans == ans:
+                        print('*                                                         *\n*  GREAT JOB!!                                            *')
+                        print('*                                                         *')
+                    elif urans != ans:
+                        print('*                                                         *\n* Oh Oh!! Try Again Please.                               *\n*')
+            i = i+1
+        done = int(input('*  Do you want to continue to play?                       *\n*'))
+        if done == 0:
+            print("*  Good Bye                                               *")
+            print('***********************************************************')
+            print('*                  The Game is Over                       *')
+            print('***********************************************************')  
+        elif done == 1:
+            i = 1
+            print('***********************************************************')
+            print('***************   Lets Continue Playing   *****************')
+            print('***********************************************************')
+            print('******************   NIEVES MATH GAME   *******************')
+            print('***********************************************************')
+            add()
 
+def sub():
+    print('subtraction')
+    i = 1
+    while i < 11:
+        for i in range(1, 11):
+            a = random.randint(0, 10)
+            b = random.randint(0, 10)
+            ans = a - b
+            print('*                                                         *')
+            print('*                                                         *')   
+            print("*   Please enter your answer                              *")
+            print('*                                                         *')
+            print('*                                                         *')
+            print("*     " + str(a) + "                                                   *")
+            print("*    -" + str(b) + "                                                   *")
+            print('* _________                                               *')
+            urans = input('*    ')
+            if urans == ans:
+                print('*                                                         *\n*  GREAT JOB!!                                             *')
+                print('*                                                         *')
+                print('*                                                         *')
+                print('*                                                         *')
+            elif urans != ans:
+                print('*                                                         *\n* Oh Oh!! Try Again Please.                               *')
+                while urans != ans:
+                    urans = input('*    ')
+                    if urans == ans:
+                        print('*                                                         *\n*  GREAT JOB!!                                            *')
+                        print('*                                                         *')
+                    elif urans != ans:
+                        print('*                                                         *\n* Oh Oh!! Try Again Please.                               *\n*')
+            i = i+1
+        done = int(input('*  Do you want to continue to play?                       *\n*'))
+        if done == 0:
+            print("*  Good Bye                                               *")
+            print('***********************************************************')
+            print('*                  The Game is Over                       *')
+            print('***********************************************************')  
+        elif done == 1:
+            i = 1
+            print('***********************************************************')
+            print('***************   Lets Continue Playing   *****************')
+            print('***********************************************************')
+            print('******************   NIEVES MATH GAME   *******************')
+            print('***********************************************************')
+            sub()
 
-#cont = (input('* Do you want to keep Going?                              *\n')
-#    if cont == 'Y' or 'Yes' or 'y' or 'yes':
-#        i = 1
-#    elif cont == 'N' or 'No' or 'n' or 'no':
-print('*                  The Game is Over                        ')
-print('***********************************************************')  
+    ops = input('Select your operation 1 for addition, 2 for subtraction')
+    if ops == 1:
+        add()
+    elif ops == 2:
+        sub()
+ops = input('1 for add, 2 for sub')
+if ops == 1:
+    add()
+elif ops == 2:
+    sub()
