@@ -1,4 +1,4 @@
-#Kids Math game because i am cheap
+#Kids Math Game
 
 #   Need to add Level of Difficulty
 # X Need to add limit level math (answer can not be greater than the max of level) (Dumb dont need this) 
@@ -10,11 +10,29 @@
 import math
 from random import randint
 
-#Addition Function
+
+def level(level):
+    difficulty = [1, 2, 3]
+    for l in difficulty:
+        if l == 1 and l == level:
+            a = randint(0, 10)
+            b = randint(0, 10)
+            return a, b
+        elif l == 2 and l == level:
+            a = randint(0, 50)
+            b = randint(0, 50)
+            return a, b
+        elif l == 3 and l == level:
+            a = randint(0, 100)
+            b = randint(0, 100)
+            return a,b
+            
 def add():
+    if level:
+        level(input('Please enter your level'))
     for i in range(0,11):
-        a = randint(0, 10)
-        b = randint(0, 10)
+        #a = randint(0, 10)
+        #b = randint(0, 10)
         right_ans = a + b
         print('*'+' ' * 78 + '*')
         print('*'+' ' * 78 + '*')   
@@ -35,7 +53,7 @@ def add():
   
         if urans != right_ans:
             print('*'+' ' * 78 + '*')
-            print('* Oh Oh!! Try Again Please.' + ' ' * 32 + '*')
+            print('* Oh Oh!! Try Again Please.' + ' ' * 52 + '*')
             while urans != right_ans:
                 urans = int(input('*' + ' ' * 5))
                 if urans == right_ans:
@@ -45,8 +63,8 @@ def add():
                     print('*'+' ' * 78 + '*')
                     print('*'+' ' * 78 + '*')
                 
-        ask()
-
+        ask() #when done test shift back one level for correct loop
+'''
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 #Subtraction Function
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -79,9 +97,10 @@ def sub():
                     print('*                                                         *')
         ask()
 
-#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 # Continue ???
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+'''
 def ask():
     done = int(input('*  Do you want to continue to play?' + ' ' * 44 + '*\n*  0 to exit 1 to continue' + ' ' * 53 + '*\n*  >_'))
     try:
@@ -122,17 +141,23 @@ def main():
     print('*' * 80)
     print('*' + ' ' * 28 + '   NIEVES MATH GAME   ' + ' ' * 28 + '*')
     print('*' * 80)
+    start()
     
-
-
-    ops = int(input('*   Select your operation 1 for addition, 2 for subtraction ' + ' ' * 19 + '*\n*   '))
+    
+def start():
+    ops = int(input('* Select your operation 1 for addition, 2 for subtraction ' + ' ' * 19 + '*\n*   '))
     try:
         if ops == 1:
             add()
         elif ops == 2:
             sub()
+        else:
+            print('* \n* Please enter a 1 for addition, 2 for subtraction.')
+            start()    
     except ValueError:
         print('* \n* Please enter a number.')
-       
+        start()
+
+
 if __name__ == "__main__":
     main()
