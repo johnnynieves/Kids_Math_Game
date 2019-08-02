@@ -10,7 +10,7 @@
 import math
 from random import randint
 
-
+'''
 def level(level):
     difficulty = [1, 2, 3]
     for l in difficulty:
@@ -26,13 +26,25 @@ def level(level):
             a = randint(0, 100)
             b = randint(0, 100)
             return a,b
-            
+'''            
 def add():
-    if level:
-        level(input('Please enter your level'))
+    difficult_asked = (input('Please enter your level'))
+    difficulty = [1, 2, 3]
+    for level in difficulty:
+        if level == difficult_asked:
+            a = randint(0, 10)
+            b = randint(0, 10)
+            
+        elif level == difficult_asked:
+            a = randint(0, 50)
+            b = randint(0, 50)
+            
+        elif level == difficult_asked:
+            a = randint(0, 100)
+            b = randint(0, 100)
+            
+            
     for i in range(0,11):
-        #a = randint(0, 10)
-        #b = randint(0, 10)
         right_ans = a + b
         print('*'+' ' * 78 + '*')
         print('*'+' ' * 78 + '*')   
