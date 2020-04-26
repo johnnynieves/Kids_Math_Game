@@ -10,7 +10,7 @@
 import math
 from random import randint
 
-'''
+
 def level(level):
     difficulty = [1, 2, 3]
     for l in difficulty:
@@ -26,7 +26,9 @@ def level(level):
             a = randint(0, 100)
             b = randint(0, 100)
             return a,b
-'''            
+
+
+
 def add():
     difficult_asked = (input('Please enter your level'))
     difficulty = [1, 2, 3]
@@ -42,7 +44,7 @@ def add():
         elif level == difficult_asked:
             a = randint(0, 100)
             b = randint(0, 100)
-            
+
             
     for i in range(0,11):
         right_ans = a + b
@@ -62,7 +64,6 @@ def add():
             print('*'+' ' * 78 + '*')
             print('*'+' ' * 78 + '*')
             print('*'+' ' * 78 + '*')
-  
         if urans != right_ans:
             print('*'+' ' * 78 + '*')
             print('* Oh Oh!! Try Again Please.' + ' ' * 52 + '*')
@@ -76,10 +77,7 @@ def add():
                     print('*'+' ' * 78 + '*')
                 
         ask() #when done test shift back one level for correct loop
-'''
-#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-#Subtraction Function
-#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 def sub():
     for i in range(0,5):
@@ -109,10 +107,8 @@ def sub():
                     print('*                                                         *')
         ask()
 
-#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-# Continue ???
-#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-'''
+
+
 def ask():
     done = int(input('*  Do you want to continue to play?' + ' ' * 44 + '*\n*  0 to exit 1 to continue' + ' ' * 53 + '*\n*  >_'))
     try:
@@ -145,9 +141,6 @@ def ask():
         
         print('something went wrong')
 
-#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\    
-#Main Program
-#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 def main():
     print('*' * 80)
