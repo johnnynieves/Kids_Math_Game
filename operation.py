@@ -2,7 +2,7 @@ from time import time
 from random import randint, choice
 
 
-def add():
+def add(questions,level):
     counter = 0
     starttime = time()
     encouragement = [
@@ -13,8 +13,8 @@ def add():
         'Awesome',
         'Well Done'
         ]
-    for i in range(0,10):
-        first = randint(2,20)
+    for i in range(0,questions):
+        first = randint(2,level)
         second = randint(2,first)
         if len(str(first)) == 2:
             print(f'  {first}')
@@ -46,10 +46,10 @@ def add():
     endtime = time()
     totaltime = starttime - endtime
     print(f'You got {counter} Right!')
-    print(f'You took {abs(int(totaltime))} seconds')
+    print(f'You took {abs(int(totaltime))} seconds\n')
 
 
-def multi_add():
+def multi_add(questions,level):
     counter = 0
     starttime = time()
     encouragement = [
@@ -60,8 +60,8 @@ def multi_add():
         'Awesome',
         'Well Done'
         ]
-    for i in range(0,10):
-        first = randint(2,20)
+    for i in range(0,questions):
+        first = randint(2,level)
         second = randint(2,first)
         third =  randint(2, second)
         if len(str(first)) == 2:
@@ -94,10 +94,10 @@ def multi_add():
     endtime = time()
     totaltime = starttime - endtime
     print(f'You got {counter} Right!')
-    print(f'You took {abs(int(totaltime))} seconds')
+    print(f'You took {abs(int(totaltime))} seconds\n')
 
 
-def subtraction():
+def subtraction(questions,level):
     counter = 0
     starttime = time()
     encouragement = [
@@ -108,8 +108,8 @@ def subtraction():
         'Awesome',
         'Well Done'
         ]
-    for i in range(0,10):
-        first = randint(2,20)
+    for i in range(0,questions):
+        first = randint(2,level)
         second = randint(2,first)
         if len(str(first)) == 2:
             print(f'  {first}')
@@ -135,4 +135,4 @@ def subtraction():
     endtime = time()
     totaltime = starttime - endtime
     print(f'You got {counter} Right!')
-    print(f'You took {abs(int(totaltime))} seconds')    
+    print(f'You took {abs(int(totaltime))} seconds\n')
