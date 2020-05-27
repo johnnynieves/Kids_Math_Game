@@ -28,18 +28,17 @@ def console():
         input('Press Enter to Continue')
         os.system('clear')
         console()
-    options = level()
-
+    
+    if ops == 0:
+        print('*' * 80)
+        print('*' + ' ' * 28 +  '   The Game is Over   ' + ' ' * 28 + '*')
+        print('*' + ' ' * 29 +  '     Good Bye !!!    '  + ' ' * 28 + '*')
+        print('*' * 80)
+        input('Press Enter to Continue...')
+        os.system('clear')        
+        exit()
     try:
-        if ops == 0:
-            print('*' * 80)
-            print('*' + ' ' * 28 +  '   The Game is Over   ' + ' ' * 28 + '*')
-            print('*' + ' ' * 29 +  '     Good Bye !!!    '  + ' ' * 28 + '*')
-            print('*' * 80)
-            input('Press Enter to Continue...')
-            os.system('clear')        
-            exit()
-
+        options = level()
         if ops == 1:
             os.system('clear')
             print('*' * 80)
