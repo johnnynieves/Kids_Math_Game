@@ -25,7 +25,7 @@ def console():
         \n        > '''))
     except ValueError:
         print('Please input one of the above options')
-        input('Press Enter to Continue')
+        input("Press any key to continue...")
         os.system('clear')
         console()
     
@@ -62,34 +62,8 @@ def console():
             console()    
     except ValueError:
         print('* \n* Please enter a number.')
+    input("Press any key to continue...")
+    os.system('clear')
     
+    console()
 
-
-def ask():
-    lets_continue = '''
-        ***********************************************************
-        ***************   Lets Continue Playing   *****************
-        ***********************************************************
-        ******************   NIEVES MATH GAME   *******************
-        ***********************************************************
-    '''
-    print('*' * 80)
-    done = int(input(
-        '*  Do you want to continue to play?' +
-        ' ' * 44 + '*\n*  0: Exit' + ' '* 69 + '*\n*  1: Continue' +
-        ' ' * 65 + '*\n*  > '))
-    if done == 0:
-        print('*' * 80)
-        print('*' + ' ' * 28 +  '   The Game is Over   ' + ' ' * 28 + '*')
-        print('*' + ' ' * 29 +  '     Good Bye !!!    '  + ' ' * 28 + '*')
-        print('*' * 80)
-        input('Press Enter to Continue...')
-        os.system('clear')        
-        exit()
-    elif done == 1:
-        os.system('clear')
-        print(lets_continue)
-        input('Press Enter to Continue...')
-        os.system('clear')
-        console()
-        ask()
