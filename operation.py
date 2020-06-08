@@ -3,7 +3,8 @@ from random import randint, choice
 
 
 def add(questions,level):
-    counter = 0
+    right = 0
+    wrong = 0
     starttime = time()
     encouragement = [
         'Excellent',
@@ -39,18 +40,22 @@ def add(questions,level):
                 my_answer = int(input('   '))
         if answer == my_answer:
             print(choice(encouragement) + '!!!')
-            counter = counter + 1
+            right = right + 1
         else:
             print('Oh! Oh!')
+            wrong = wrong + 1
         print('\n')
     endtime = time()
     totaltime = starttime - endtime
-    print(f'You got {counter} Right!')
+    print(f'You got {right} Right!')
+    score = (100 // (right+wrong)) * right
+    print(f'Your score is {score}%')
     print(f'You took {abs(int(totaltime))} seconds\n')
 
 
 def multi_add(questions,level):
-    counter = 0
+    right = 0
+    wrong = 0
     starttime = time()
     encouragement = [
         'Excellent',
@@ -87,18 +92,22 @@ def multi_add(questions,level):
             my_answer = int(input('  '))
         if answer == my_answer:
             print(choice(encouragement) + '!!!')
-            counter = counter + 1
+            right = right + 1
         else:
             print('Oh! Oh!')
+            wrong = wrong + 1
         print('\n')
     endtime = time()
     totaltime = starttime - endtime
-    print(f'You got {counter} Right!')
+    print(f'You got {right} Right!')
+    score = (100 // (right+wrong)) * right
+    print(f'Your score is {score}%')
     print(f'You took {abs(int(totaltime))} seconds\n')
 
 
 def subtraction(questions,level):
-    counter = 0
+    right = 0
+    wrong = 0
     starttime = time()
     encouragement = [
         'Excellent',
@@ -128,11 +137,14 @@ def subtraction(questions,level):
             my_answer = int(input('   '))
         if answer == my_answer:
             print(choice(encouragement) + '!!!')
-            counter = counter + 1
+            right = right + 1
         else:
             print('Oh! Oh!')
+            wrong = wrong + 1
         print('\n')
     endtime = time()
     totaltime = starttime - endtime
-    print(f'You got {counter} Right!')
+    print(f'You got {right} Right!')
+    score = (100 // (right+wrong)) * right
+    print(f'Your score is {score}%')    
     print(f'You took {abs(int(totaltime))} seconds\n')

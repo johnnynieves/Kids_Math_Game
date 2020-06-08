@@ -4,7 +4,7 @@ import os
 
 def level():
     questions = int(input('How many questions to quiz? '))
-    levels = int(input('Enter max digits or equation? '))
+    levels = int(input('Enter max digits for equation? '))
     return [questions,levels] 
 
 
